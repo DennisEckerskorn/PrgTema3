@@ -1,12 +1,13 @@
 import java.util.Scanner;
 public class Ejercicio5{
 	public static void main(String[] args){
+		//Variables
 		Scanner lector = new Scanner(System.in);
 		int numeroUsuario;
-
+		//Se piden datos.
 		System.out.println("Dime la nota (entre 1 y 10) ");
 		numeroUsuario = Integer.parseInt(lector.nextLine());
-
+		//Switch para elegir el caso apropiado al número.
 		switch(numeroUsuario) {
 			case 0: System.out.println("INSUFICIENTE");
 				break;
@@ -32,6 +33,7 @@ public class Ejercicio5{
 				break;
 			default:
 				System.out.println("ERROR");
-		}		
+		}
+			lector.close();
 	}
 }
