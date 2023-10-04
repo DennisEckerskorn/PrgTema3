@@ -3,12 +3,14 @@ public class Ejercicio5{
 	public static void main(String[] args){
 		//Variables
 		Scanner lector = new Scanner(System.in);
-		int numeroUsuario;
+		float calificacion;
+		int nota;
 		//Se piden datos.
 		System.out.println("Dime la nota (entre 1 y 10) ");
-		numeroUsuario = Integer.parseInt(lector.nextLine());
-		//Switch para elegir el caso apropiado al número.
-		switch(numeroUsuario) {
+		calificacion = Float.parseFloat(lector.nextLine());
+		//Switch para elegir el caso apropiado al número. Convertimos el float a un Int para quitar las decimales (Casting).
+		nota = (int) calificacion;
+		switch(nota) {
 			case 0: case 1: case 2: case 3: case 4:
 				System.out.println("INSUFICIENTE");
 				break;
