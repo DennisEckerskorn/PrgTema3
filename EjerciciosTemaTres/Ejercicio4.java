@@ -11,19 +11,10 @@ public class Ejercicio4 {
 		System.out.println("Introduzca otro número con Decimales");
 		num2 = Double.parseDouble(lector.nextLine());
 		//Condicion, para ordenaro el numero de menor a mayor.
-		if (num1>num2){
-			System.out.println(num2);
-			System.out.println(num1);
-		}else if(num2<num1){
-			System.out.println(num2);
-			System.out.println(num1);
-		}else if(num2>num1){
-			System.out.println(num1);
-			System.out.println(num2);
+		if (num1<num2){
+			System.out.println(num1 + " " + num2);
 		}else{
-			System.out.println("Son iguales");
-			System.out.println(num1);
-			System.out.println(num2);
+			System.out.println(num2 + " " + num1);
 		}
 		//Cerramos el Scanner.
 		lector.close();
