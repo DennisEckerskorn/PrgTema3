@@ -5,6 +5,8 @@ public class Ejercicio7 {
 		Scanner lector = new Scanner(System.in);
 		int cuotaBase = 500;
 		int edad;
+		int resultadoDescuento = 0;
+		int precioFinal = 0;
 		char confirmacionSocio = ' ';
 		boolean socio = false;
 		
@@ -32,7 +34,22 @@ public class Ejercicio7 {
 			socio = false;
 		}
 		
-
-		
+		//Condiciones para comprobar si la edad es la que toca y si son socios o no para aplicar el descuento.
+		if (edad >= 65 && socio == true){
+			resultadoDescuento = cuotaBase * 50 / 100;
+			precioFinal = cuotaBase - resultadoDescuento;
+			System.out.println("El precio para mayores de 65 años y socios es: " + precioFinal + " euros.");
+		} else if (edad < 18 && socio == true){
+			resultadoDescuento = cuotaBase * 35 / 100;
+			precioFinal = cuotaBase - resultadoDescuento;
+			System.out.println("El precio para menores de edad y socios es: " + precioFinal + " euros.");
+		} else if (edad < 18 && socio == false){
+			resultadoDescuento = cuotaBase * 25 / 100;
+			precioFinal = cuotaBase - resultadoDescuento;
+			System.out.println("El precio para menores de edad y no socios es: " + precioFinal + " euros.");
+		} else {
+			System.out.println("Eres mayor que 18 años y menor que 65 años, no cumples los requisitos para un descuento.");
+		}
+		lector.close();
 	}
 }
