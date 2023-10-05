@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class Ejercicio6{
 	public static void main(String[] args){
+		//Variables.
 		Scanner lector = new Scanner(System.in);
 		float euros;
 		int moneda200;
@@ -11,52 +12,46 @@ public class Ejercicio6{
 		int moneda5;
 		int moneda2;
 		int moneda1;
-		int restante;
-		
-		
-		
+		int devolver;
+		//Pedimos datos con Decimal.
 		System.out.println("¿Cuántos euros quieres convertir a la cantidad mínima en monedas?");
 		euros = Float.parseFloat(lector.nextLine());
-
-		restante =  (int) (euros * 100);
-		
-		moneda200 = restante / 200;
-		restante = restante % 200;
-
-		moneda100 = restante / 100;
-		restante = restante % 100;
-
-		moneda50 = restante / 50;
-		restante = restante % 50;
-
-		moneda20 = restante / 20;
-		restante = restante % 20;
-		
-		moneda10 = restante / 10;
-		restante = restante % 10;
-		
-		moneda5 = restante / 5;
-		restante = restante % 5;
-
-		moneda2 = restante / 2;
-		restante = restante % 2;
-		
-		moneda1 = restante / 1;
-		restante = restante /1;
-		
-		System.out.println(restante);
-		System.out.println(moneda200);
-		System.out.println(moneda100);
-		System.out.println(moneda50);
-		System.out.println(moneda20);
-		System.out.println(moneda10);
-		System.out.println(moneda5);
-		System.out.println(moneda2);
-		System.out.println(moneda1);
-
-
-
-		
-		
+		//Convertimos el número con decimales a un entero para convertirlo a céntimos con un Casting.
+		devolver =  (int) (euros * 100);
+		//Convertimos los centimos a monedas y mostramos los resultados, uso las condiciones para que solo salgan las monedas necesarias, es decir si el valor es 0, no se imprime.
+		if (devolver >= 200) {
+            		System.out.println("Monedas de 2 euros: " + devolver / 200);
+            		devolver = devolver % 200;
+        	}
+		if (devolver >= 100) {
+            		System.out.println("Monedas de 1 euro: " + devolver / 100);
+            		devolver = devolver % 100;
+        	} 
+		if (devolver >= 50) {
+            		System.out.println("Monedas de 50 céntimos: " + devolver / 50);
+            		devolver = devolver % 50;
+        	}
+		if (devolver >= 20) {
+            		System.out.println("Monedas de 20 céntimos: " + devolver / 20);
+            		devolver = devolver % 20;
+        	}
+		if (devolver >= 10) {
+            		System.out.println("Monedas de 10 céntimos: " + devolver / 10);
+            		devolver = devolver % 10;
+        	} 
+		if (devolver >= 5) {
+            		System.out.println("Monedas de 5 céntimos: " + devolver / 5);
+            		devolver = devolver % 5;
+        	} 
+		if (devolver >= 2) {
+            		System.out.println("Monedas de 2 céntimos: " + devolver / 2);
+            		devolver = devolver % 2;
+        	} 
+		if (devolver >= 1) {
+            		System.out.println("Monedas de 1 céntimo: " + devolver);
+            		devolver = devolver % 1;
+        	}
+		//Cerramos el Scanner.
+		lector.close();
 	}
 }
