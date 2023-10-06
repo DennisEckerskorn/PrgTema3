@@ -15,15 +15,19 @@ public class Ejercicio7 {
 		edad = Integer.parseInt(lector.nextLine());
 
 		//Condición para saber si el usuario es mayor o menor y si es socio o no (o los padres).
-		if (edad > 17){
+		if (edad >= 65){
+			System.out.println("Eres anciano se te aplica el 50%");
+		} else if (edad > 17 && edad < 65){
 			System.out.println("Eres mayor de edad");
 			System.out.println("¿Eres socio/a del Club de Golf?");
 			System.out.println("Contesta con Sí o No");
 			confirmacionSocio = lector.next().charAt(0);
+			lector.nextLine();
 		} else {
 			System.out.println("No eres mayor de edad, ¿tus padres son socios?");
 			System.out.println("Contesta con Sí o No");
 			confirmacionSocio = lector.next().charAt(0);
+			lector.nextLine();
 		}
 		
 		//Condición para comprobar el caracter introducido y si el usuario es socio o no.
@@ -35,10 +39,10 @@ public class Ejercicio7 {
 		}
 		
 		//Condiciones para comprobar si la edad es la que toca y si son socios o no para aplicar el descuento.
-		if (edad >= 65 && socio == true){
+		if (edad >= 65){
 			resultadoDescuento = cuotaBase * 50 / 100;
 			precioFinal = cuotaBase - resultadoDescuento;
-			System.out.println("El precio para mayores de 65 años y socios es: " + precioFinal + " euros.");
+			System.out.println("El precio para mayores de 65 años son " + precioFinal + " euros.");
 		} else if (edad < 18 && socio == true){
 			resultadoDescuento = cuotaBase * 35 / 100;
 			precioFinal = cuotaBase - resultadoDescuento;
@@ -49,6 +53,7 @@ public class Ejercicio7 {
 			System.out.println("El precio para menores de edad y no socios es: " + precioFinal + " euros.");
 		} else {
 			System.out.println("Eres mayor que 18 años y menor que 65 años, no cumples los requisitos para un descuento.");
+			System.out.println("El precio que se aplica son: " + cuotaBase);
 		}
 		lector.close();
 	}
