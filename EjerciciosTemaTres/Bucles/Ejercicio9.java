@@ -5,21 +5,23 @@ public class Ejercicio9{
 		Scanner lector = new Scanner(System.in);
 		int numeroUsuario = 0;
 		int contador = 0;
+		boolean esPrimo = numeroUsuario == 1 ? false : true;
 		System.out.println("Ingresa un número para averiguar si es primo o no:");
 		numeroUsuario = Integer.parseInt(lector.nextLine());
-		//Bucle for, recorre desde 1 hasta el numero indicado y comprueba si el resto es 0 aumentando el contador.
-		for (int i = 1; i<=numeroUsuario; i++){
-			if((numeroUsuario%i) == 0){
-				contador++;
-			}
-		} 
-		//Condicion, si el contador llega a 2 imprime el mensaje numero es primo.
-		if(contador == 2){
-			System.out.println("El número es primo");
-		}else{
-			System.out.println("El número no es primo");
-		}
 		
+		//Número Primo o no.
+		for(int i = numeroUsuario - 1; i >= 2; i--){
+			if (numeroUsuario % i == 0){
+			esPrimo = false;
+			break;	
+			}
+		}
+		System.out.println("El número " + numeroUsuario);
+		if (esPrimo) {
+			System.out.print(" es primo");
+		}else{
+			System.out.print(" no es primo");
+		}
 		lector.close();
 	}
 }

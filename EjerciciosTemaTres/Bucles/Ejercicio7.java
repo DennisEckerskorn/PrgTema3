@@ -7,21 +7,27 @@ public class Ejercicio7{
 		double numeroBase; //(a)
 		int exponente; //(b)
 		double resultado = 1;
+		boolean negativo = true;
+		boolean positivo = false;
 		
-
 		System.out.println("Ingresa un número real cómo número base");
-		numeroBase = Float.parseFloat(lector.nextLine());
+		numeroBase = Double.parseDouble(lector.nextLine());
 
 		System.out.println("Ingresa el exponente para calcular la potencia.");
 		exponente = Integer.parseInt(lector.nextLine());
+
+		if(exponente < 0){
+			negativo = true;
+		} else {
+			positivo = false;
+		}
 		
-		for(int i = 0; i < exponente; i++){
-			//Se calcula la potencia con el for, repitiendo el numero a multiplicar. Por alguna razón no me deja calcular el resultado negativo apropiado ni añadir el signo negativo en la operación. 
-			//Falta corregir y acabar.
-			resultado = (numeroBase * resultado);
-			if (exponente < 0){
-				resultado = 1/(numeroBase * resultado);
-			}
+		for(int i = 1; i <= exponente; i++){
+			resultado = resultado * numeroBase;	
+		}
+		
+		if(negativo){
+			resultado = 1 / resultado;
 		}
 		
 		System.out.println(numeroBase + " elevado a " + exponente + " es igual a " + resultado);
