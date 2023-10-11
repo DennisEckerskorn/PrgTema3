@@ -35,5 +35,7 @@ public class Ejercicio12{
 				System.out.println("Has llegado al maximo de intentos, vuelve a ejecutar el programa para jugar de nuevo");		
 			}
 		}while(numeroIntentos != 0);
+
+		lector.close();
 	}
 }
