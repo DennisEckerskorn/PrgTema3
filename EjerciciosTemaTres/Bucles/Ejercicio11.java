@@ -1,4 +1,4 @@
-import java.util.Scanner;
+/import java.util.Scanner;
 public class Ejercicio11{
 	public static void main(String[] args){
 		//Variables.
@@ -11,11 +11,19 @@ public class Ejercicio11{
 		do{
 			System.out.println("Introduce un número");
 			numero = Double.parseDouble(lector.nextLine());
-			suma = suma + numero;
-			contador = contador + 1;
+			if (numero >= 0){
+				suma = suma + numero;
+				contador = contador + 1;
+			}
+			
 		}while(numero >= 0);
-		//Se calcula la media.
-		media = suma / contador;
+		//Se calcula la media. Si contador es 0 media es igual 0.
+		//sino media es igual a suma / contador.
+		//if(contador = 0)
+		//	media = 0;
+		//else
+		//	media = suma / contador.
+		media = contador == 0 ? 0 : suma / contador;
 		//Se imprime el resultado.
 		System.out.println("La media de los números ingresados es: " + media);
 		//Se cierra el Scanner.
