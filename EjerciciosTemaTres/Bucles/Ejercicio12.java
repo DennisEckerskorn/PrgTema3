@@ -15,6 +15,8 @@ public class Ejercicio12{
 			System.out.println("Selecciona una opción:");
 			System.out.println("1. Jugar");
 			System.out.println("0. Salir");
+			
+			opcion = Integer.parseInt(lector.nextLine());
 
 			switch (opcion){
 				case 0:
