@@ -20,7 +20,7 @@ public class Ejercicio14{
 		double porcentajeCuatro;
 		double porcentajeCinco;
 		double porcentajeSeis;
-		double probabilidad;
+		//double probabilidad;
 		//Bucle para repetir la tirada del dado 1000000 de veces, contando que numero sale en cada tirada.
 		for(int i = 0; i < numVeces; i++){
 			numDado = rnd.nextInt(MAXCARAS - MINCARAS + 1) + MINCARAS; //Rango de 1 al 6
