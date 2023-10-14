@@ -3,7 +3,7 @@ public class Ejercicio3{
 	public static void main(String[] args){
 		Scanner lector = new Scanner(System.in);
 		int suma = 0;
-		int num1, num2, multiplicacion;
+		int num1, num2;
 		System.out.println("Dime un numero");
 		num1 = Integer.parseInt(lector.nextLine());
 		System.out.println("Dime otro numero");
@@ -13,5 +13,7 @@ public class Ejercicio3{
 			suma = suma + num2;
 		}
 		System.out.println(suma);
+		
+		lector.close();
 	}	
 }

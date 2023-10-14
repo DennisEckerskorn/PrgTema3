@@ -4,7 +4,7 @@ public class Ejercicio9{
 		//Variables.
 		Scanner lector = new Scanner(System.in);
 		int numeroUsuario = 0;
-		int contador = 0;
+		//int contador = 0;
 		boolean esPrimo = numeroUsuario == 1 ? false : true;
 		System.out.println("Ingresa un número para averiguar si es primo o no:");
 		numeroUsuario = Integer.parseInt(lector.nextLine());
@@ -16,7 +16,7 @@ public class Ejercicio9{
 			break;	
 			}
 		}
-		System.out.println("El número " + numeroUsuario);
+		System.out.print("El número " + numeroUsuario);
 		if (esPrimo) {
 			System.out.print(" es primo");
 		}else{
