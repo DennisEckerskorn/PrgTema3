@@ -1,11 +1,14 @@
 import java.util.Scanner;
-import java.lang.Math;
+import java.util.Random;
 
 public class Ejercicio12{
 	public static void main(String[] args){
 		//Declaración de las variables.
 		Scanner lector = new Scanner(System.in);
-		int numeroAleatorio = (int) (Math.random()*100)+1; //Se genera un numero aleatorio entre 1 y 100, se hace un cast porque random devuelve un double pero queremos un numero entero.
+		Random rnd = new Random();
+		final int MIN = 1;
+		final int MAX = 100;
+		int numeroAleatorio;
 		int numeroUsuario;
 		int numeroIntentos = 0;
 		int opcion = 0;
@@ -28,6 +31,7 @@ public class Ejercicio12{
 						break;
 					case 1:
 						do{	
+							numeroAleatorio = rnd.nextInt(MAX - MIN + 1) + MIN;
 							//Prueba para ver el número aleatorio: 
 							//System.out.println(numeroAleatorio);
 						
@@ -45,7 +49,7 @@ public class Ejercicio12{
 							//Si el numero es igual.
 							}else if (numeroAleatorio == numeroUsuario){
 								System.out.println("HAS GANADO, el número es: " + numeroAleatorio);
-								numeroIntentos = numeroIntentos - 1;
+								break;
 							}
 							//Si se acaban los intentos imprimios un mensaje.
 							if (numeroIntentos == 0){
