@@ -10,31 +10,30 @@ public class Ejercicio16{
 		final int MIN = 1;
 		final int MAX = 6;
 		int opcion;
+		int tiradaJugador;
+		int tiradaOrdenador;
 		int puntosJugador = 0;
 		int puntosOrdenador = 0;
-		
+		int porraJugador;
+		int porraOrdenador;
 		
 		
 		do{
 			System.out.println("Bienvenido al Black Jack");
 			System.out.println("El jugador tira los dados:");
 			
+			do{
+				dado = rnd.nextInt(MAX-MIN+1)+MIN;
+				tiradaJugador = dado;
+				System.out.println("El jugador ha tirado un " + dado);
+			}while(tiradaJugador == 11 || 
 			
-			opcion = Integer.parseInt(lector.nextLine());
+			
+			
 
-			switch (opcion){
-				case 0: //Sale del juego.
-					break;
-				case 1: //Empieza el juego.
-						//Se establece el rango de números aleatorios entre el 1 y el 6.
-						dado = rnd.nextInt(MAX-MIN+1)+MIN;
-						
-						System.out.println("El jugador ha tirado un " + dado);
-
-
-					
-					break;	
-			}
+			if (tiradaJugador == 11) {
+				System.out.println("HAS GANADO");
+			}else if tiradaJugador 
 
 		}while(opcion != 0);	
 		
