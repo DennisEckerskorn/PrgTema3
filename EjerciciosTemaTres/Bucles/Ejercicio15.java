@@ -12,7 +12,7 @@ public class Ejercicio15{
 		do{
 			System.out.println("Ingresa la hora");
 			horas = Integer.parseInt(lector.nextLine());
-			if (horas >= 0 && horas <= 24){
+			if (horas >= 0 && horas <= 23){
 				salir = true;	
 			} else {
 				System.out.println("No es válido, ingresa un número válido.");
