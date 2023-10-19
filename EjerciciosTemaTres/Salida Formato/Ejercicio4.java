@@ -3,7 +3,7 @@ public class Ejercicio4{
 		String numeros = "";
 		for (int i = 1; i <= 9; i++){
 			numeros += i;
-			System.out.printf("%s\n", numeros);
+			System.out.printf("%-9s\n", numeros);
 		}
 	}
 }
