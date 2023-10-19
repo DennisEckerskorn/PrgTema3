@@ -18,21 +18,23 @@ public class Ejercicio2{
 		do{
 			System.out.println("Indica los minutos");
 			minuto = Integer.parseInt(lector.nextLine());
-			valido = minuto >= 0 && minuto <= 60;
+			valido = minuto >= 0 && minuto <= 59;
 			if (!valido){
-				System.out.println("El valor de los minutos no es correcto, ingresa un valor válido (0-60).");
+				System.out.println("El valor de los minutos no es correcto, ingresa un valor válido (0-59).");
 			}	
 		}while(!valido);
 		
 		do{
 			System.out.println("Indica los segundos");
 			segundo = Integer.parseInt(lector.nextLine());
-			valido = segundo >= 0 && segundo <= 60;
+			valido = segundo >= 0 && segundo <= 59;
 			if (!valido){
-				System.out.println("El valor de los segundos no es correcto, ingresa un valor válido (0-60).");
+				System.out.println("El valor de los segundos no es correcto, ingresa un valor válido (0-59).");
 			}	
 		}while(!valido);
 		
-		System.out.printf("%02d:%02d:%02d", hora, minuto, segundo);	
+		System.out.printf("%02d:%02d:%02d", hora, minuto, segundo);
+		
+		lector.close();
 	}
 }
