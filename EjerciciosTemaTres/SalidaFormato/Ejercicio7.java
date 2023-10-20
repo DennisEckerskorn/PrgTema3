@@ -10,8 +10,9 @@ public class Ejercicio7{
 			//Recorre los numeros de 1 al 9 y los concatena al reves.
 			for (int j = numerosI.length() - 1; j >= 0; j--){
 				numerosInvertidos += numerosInvertidos.charAt(j);	
-			} 
-			System.out.printf("\u001B[7m%9s%-9s\u001B[0m\n", numerosI, numerosInvertidos);
+			}
+			int pos = 9+i; //Se establece el ancho del campo de impresión.
+			System.out.printf("%" + pos + "s\n", numerosInvertidos);
 		}	
 	}
 }
