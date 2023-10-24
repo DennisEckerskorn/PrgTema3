@@ -8,6 +8,7 @@ public class Ejercicio9{
 		double temperatura, presionAtmosferica; 
 		int dia, mes, anyo, hora, minutos, segundos, velocidadViento, lluvia, radiacionUltravioleta;
 		boolean validado;
+		final int ANCHO_COLUMNA = 30;
 
 		//Se pide el nombre de la ciudad:
 		System.out.println("Bienvenido a la Estación Meteorológica");
@@ -38,7 +39,7 @@ public class Ejercicio9{
 			anyo = Integer.parseInt(lector.nextLine());
 			validado = anyo >= 0 && anyo <= 2023;
 			if (!validado){
-				System.out.println("El año no es válido, vuelve a introducir un año válido: [1930 - 2023 años]");
+				System.out.println("El año no es válido, vuelve a introducir un año válido: [0 - 2023 años]");
 			}
 		}while(!validado);
 
@@ -117,8 +118,8 @@ public class Ejercicio9{
 
 		//FALTA AJUSTAR LAS POSICIONES DE LOS RESULTADOS.	
 		
-		System.out.printf("\u001b[44m%s\u001B[0m\n", titulo);
-		System.out.printf("Ciudad:%24s\u001B[0m\n", ciudad);
+		System.out.printf("\u001b[44m%s\n", titulo);
+		System.out.printf("%" + ANCHO_COLUMNA + "s%s Ciudad:\n", ciudad); //EJEMPLO
 		System.out.printf("Fecha:%16s%02d:%02d:%04d\u001B[0m\n","", dia, mes, anyo);
 		System.out.printf("Hora de la mesura:%16s%02d:%02d:%02d\u001B[0m\n", "", hora, minutos, segundos);
 
