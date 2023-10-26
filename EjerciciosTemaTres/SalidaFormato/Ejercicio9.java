@@ -120,27 +120,27 @@ public class Ejercicio9{
 		
 		System.out.printf("\u001b[44m%s\n", titulo);
 		System.out.printf("%" + ANCHO_COLUMNA + "s%s Ciudad:\n", ciudad); //EJEMPLO
-		System.out.printf("Fecha:%16s%02d:%02d:%04d\u001B[0m\n","", dia, mes, anyo);
-		System.out.printf("Hora de la mesura:%16s%02d:%02d:%02d\u001B[0m\n", "", hora, minutos, segundos);
+		System.out.printf("%" + ANCHO_COLUMNA + "s Fecha:%02d:%02d:%04d\n",dia, mes, anyo);
+		System.out.printf("%" + ANCHO_COLUMNA + "s Hora de la mesura:%02d:%02d:%02d\n", "", hora, minutos, segundos);
 
 		//CONDICION VELOCIDAD VIENTO
 		if(velocidadViento < 30){
-			System.out.printf("Velocidad viento:\u001B[32m%13d km/h\u001B[0m\n", velocidadViento );
+			System.out.printf("Velocidad viento:\u001B[32m%13d km/h\n", velocidadViento );
 		} else if(velocidadViento >= 30 && velocidadViento <= 60){
-			System.out.printf("Velocidad viento:\u001B[33m%13d km/h\u001B[0m\n", velocidadViento );
+			System.out.printf("Velocidad viento:\u001B[33m%13d km/h\n", velocidadViento );
 		} else {
-			System.out.printf("Velocidad viento:\u001B[31m%13d km/h\u001B[0m\n", velocidadViento );
+			System.out.printf("Velocidad viento:\u001B[31m%13d km/h\n", velocidadViento );
 		}
 
 		//CONDICION TEMPERATURA
 		if(temperatura < 22){
-			System.out.printf("Temperatura:\u001B[34m%16.2f Cº\u001B[0m\n", temperatura);
+			System.out.printf("Temperatura:\u001B[34m%16.2f Cº\n", temperatura);
 		} else if(temperatura >= 22 && temperatura < 27){
-			System.out.printf("Temperatura:\u001B[32m%16.2f Cº\u001B[0m\n", temperatura);
+			System.out.printf("Temperatura:\u001B[32m%16.2f Cº\n", temperatura);
 		} else if(temperatura >= 27 && temperatura <= 35){
-			System.out.printf("Temperatura:\u001B[33m%16.2f Cº\u001B[0m\n", temperatura);
+			System.out.printf("Temperatura:\u001B[33m%16.2f Cº\n", temperatura);
 		} else {
-			System.out.printf("Temperatura:\u001B[31m%16.2f Cº\u001B[0m\n", temperatura);
+			System.out.printf("Temperatura:\u001B[31m%16.2f Cº\n", temperatura);
 		}
 		
 		System.out.printf("Presión atmosférica:%11.1f hPa\n", presionAtmosferica);
@@ -149,22 +149,22 @@ public class Ejercicio9{
 		if(lluvia < 35){
 		System.out.printf("Probabilidad lluvia:\u001B[32m%7d\n", lluvia);	
 		} else if (lluvia >= 35 && lluvia <= 70){
-			System.out.printf("Probabilidad lluvia:\u001B[33m%7d\u001B[0m\n", lluvia);	
+			System.out.printf("Probabilidad lluvia:\u001B[33m%7d\n", lluvia);	
 		} else {
-			System.out.printf("Probabilidad lluvia:\u001B[31m%7d\u001B[0m\n", lluvia);
+			System.out.printf("Probabilidad lluvia:\u001B[31m%7d\n", lluvia);
 		}
 		
 		//CONDICION RADIACION ULTRAVIOLETA
 		if(radiacionUltravioleta <= 2){
-			System.out.printf("UVI:\u001b[32m%12d\u001B[0m", radiacionUltravioleta);
+			System.out.printf("UVI:\u001b[32m%12d", radiacionUltravioleta);
 		} else if (radiacionUltravioleta >= 3 && radiacionUltravioleta <= 5){
-			System.out.printf("UVI:\u001b[34m%12d\u001B[0m", radiacionUltravioleta);
+			System.out.printf("UVI:\u001b[34m%12d", radiacionUltravioleta);
 		} else if (radiacionUltravioleta >= 6 && radiacionUltravioleta <= 7){
-			System.out.printf("UVI:\u001b[33m%12d\u001B[0m", radiacionUltravioleta);
+			System.out.printf("UVI:\u001b[33m%12d", radiacionUltravioleta);
 		} else if (radiacionUltravioleta >= 8 && radiacionUltravioleta <= 10){
-			System.out.printf("UVI:\u001b[31m%12d\u001B[0m", radiacionUltravioleta);
+			System.out.printf("UVI:\u001b[31m%12d", radiacionUltravioleta);
 		} else {
-			System.out.printf("UVI:\u001b[35m%12d\u001B[0m", radiacionUltravioleta);
+			System.out.printf("UVI:\u001b[35m%12d", radiacionUltravioleta);
 		}
 		//RESET FORMATO
 		System.out.printf("\u001B[0m");
